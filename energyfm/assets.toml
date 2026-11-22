@@ -1,0 +1,61 @@
+[datasets.vea]
+url = "https://zenodo.org/records/13910298/files/load-profile-data.zip?download=1"
+file = "vea/vea_load_profiles.zip"
+version = "10.5281/zenodo.13910298"
+source = "https://doi.org/10.5281/zenodo.13910298"
+license = "CC-BY-4.0"
+attribution = "Paul Hendrik Tiemann, OFFIS"
+
+[datasets.uci]
+url = "https://archive.ics.uci.edu/static/public/321/electricityloaddiagrams20112014.zip"
+file = "uci/uci_electricity.zip"
+version = "10.24432/C58C86"
+source = "https://doi.org/10.24432/C58C86"
+license = "CC-BY-4.0"
+attribution = "Artur Trindade, UCI Machine Learning Repository"
+
+[datasets.hill-of-towie]
+url = "https://zenodo.org/records/22662930/files/2023.zip?download=1"
+file = "hill_of_towie/2023.zip"
+version = "10.5281/zenodo.22662930"
+source = "https://doi.org/10.5281/zenodo.22662930"
+license = "CC-BY-4.0"
+attribution = "Alex Clerc and Elizabeth Lingkan, Renewable Energy Systems, on behalf of TRIG"
+
+[datasets.penmanshiel]
+url = "https://zenodo.org/records/16807304/files/Penmanshiel_PMU_2023_2024_5969.zip?download=1"
+file = "penmanshiel/Penmanshiel_PMU_2023_2024_5969.zip"
+version = "10.5281/zenodo.16807304"
+source = "https://doi.org/10.5281/zenodo.16807304"
+license = "CC-BY-4.0"
+attribution = "Charlie Plumley, Roberta Takeuchi and Cubico Sustainable Investments"
+
+[e1]
+version = 1
+file = "energyfm-e1-inputs-v1.zip"
+license = "CC-BY-4.0"
+attribution_file = "sources.json"
+
+[models.chronos]
+repository = "amazon/chronos-2"
+revision = "29ec3766d36d6f73f0696f85560a422f50e8498c"
+license = "Apache-2.0"
+files = ["config.json", "model.safetensors"]
+
+[models.chronos-small]
+repository = "autogluon/chronos-2-small"
+revision = "ddec01313e50b6bc58ebaa92ede81bc24a3d9f9a"
+license = "Apache-2.0"
+files = ["config.json", "model.safetensors"]
+
+[models.toto]
+repository = "Datadog/Toto-2.0-22m"
+revision = "685e4ae3e2be8d8998025e53dd98e7fdcb296a89"
+license = "Apache-2.0"
+files = ["config.json", "model.safetensors"]
+
+[models.chronicle]
+repository = "InertialAI/Chronicle"
+revision = "9cc39bfdd21329aa16e308e3e957b532b0a89193"
+license = "Apache-2.0"
+files = ["stage-2/config.json", "stage-2/model.safetensors", "tokenizer/tokenizer.pkl"]

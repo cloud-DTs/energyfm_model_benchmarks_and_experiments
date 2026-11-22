@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "energyfm-benchmarks"
+version = "0.1.0"
+description = "Energy forecasting, distillation, and continual-learning benchmarks"
+requires-python = ">=3.13,<3.14"
+license-files = ["licenses/Chronicle-LICENSE"]
+dependencies = [
+    "chronos-forecasting==2.3.2",
+    "dd-unit-scaling==0.1.0",
+    "huggingface-hub==0.36.2",
+    "numpy==2.5.4",
+    "pandas==2.3.3",
+    "safetensors==0.8.0",
+    "tiktoken==0.14.0",
+    "toto-2==2.0.0",
+    "transformers==4.57.6",
+    "unit-scaling==0.3.5",
+]
+
+[project.optional-dependencies]
+cpu = ["torch==2.10.0"]
+cuda = ["torch==2.10.0"]
+
+[project.scripts]
+energyfm = "energyfm.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["energyfm", "energyfm.*"]
+
+[tool.setuptools.package-data]
+energyfm = ["assets.toml"]
+
+[tool.uv]
+conflicts = [[{ extra = "cpu" }, { extra = "cuda" }]]
+environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "sys_platform == 'win32' and platform_machine == 'AMD64'",
+    "sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+required-environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "sys_platform == 'win32' and platform_machine == 'AMD64'",
+    "sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cuda", extra = "cuda", marker = "sys_platform != 'darwin'" },
+    { index = "pytorch-cpu", extra = "cpu", marker = "sys_platform != 'darwin'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

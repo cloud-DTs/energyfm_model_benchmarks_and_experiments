@@ -1,0 +1,194 @@
+{
+  "historical_reference": true,
+  "models": {
+    "toto": {
+      "triggers": [
+        {
+          "profile_id": 101,
+          "observed_day": 312,
+          "update_day": 313,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 102,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 103,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 104,
+          "observed_day": 312,
+          "update_day": 313,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 106,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 107,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 108,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 109,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 110,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 111,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        }
+      ],
+      "summary": {
+        "head": {
+          "candidates": 10,
+          "accepted": 0,
+          "profiles_with_any_acceptance": [],
+          "mean_shadow_improvement_percent": 0.0067498606706443785
+        },
+        "full": {
+          "candidates": 10,
+          "accepted": 7,
+          "profiles_with_any_acceptance": [
+            101,
+            103,
+            106,
+            108,
+            109,
+            110,
+            111
+          ],
+          "mean_shadow_improvement_percent": 0.22414684796640807
+        }
+      },
+      "seeds": [
+        42
+      ]
+    },
+    "chronos-small": {
+      "triggers": [
+        {
+          "profile_id": 101,
+          "observed_day": 311,
+          "update_day": 312,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 103,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 104,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 106,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 107,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 108,
+          "observed_day": 314,
+          "update_day": 315,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 111,
+          "observed_day": 328,
+          "update_day": 329,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 112,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 4
+        },
+        {
+          "profile_id": 115,
+          "observed_day": 309,
+          "update_day": 310,
+          "failure_count": 3
+        },
+        {
+          "profile_id": 116,
+          "observed_day": 310,
+          "update_day": 311,
+          "failure_count": 3
+        }
+      ],
+      "summary": {
+        "head": {
+          "candidates": 30,
+          "accepted": 15,
+          "profiles_with_any_acceptance": [
+            104,
+            106,
+            108,
+            111,
+            115
+          ],
+          "mean_shadow_improvement_percent": 0.08018040385960298
+        },
+        "full": {
+          "candidates": 30,
+          "accepted": 28,
+          "profiles_with_any_acceptance": [
+            101,
+            103,
+            104,
+            106,
+            107,
+            108,
+            111,
+            112,
+            115,
+            116
+          ],
+          "mean_shadow_improvement_percent": 18.998362976259415
+        }
+      },
+      "seeds": [
+        42,
+        43,
+        44
+      ]
+    }
+  }
+}

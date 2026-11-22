@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "files": [
+        "prepared/hill_of_towie/fleet.npz",
+        "cases/01.csv"
+      ],
+      "source": "Hill of Towie wind farm open dataset, 2023.zip",
+      "url": "https://zenodo.org/records/22662930",
+      "credit": "Alex Clerc and Elizabeth Lingkan, Renewable Energy Systems, on behalf of TRIG",
+      "license": "CC BY 4.0",
+      "processing": "Hourly averaging of complete sets of six ten-minute SCADA measurements. Case keys use the last observed hour end in UTC.",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "files": [
+        "prepared/penmanshiel/power.csv",
+        "cases/02.csv"
+      ],
+      "source": "Penmanshiel PMU 2023–2024",
+      "url": "https://zenodo.org/records/16807304",
+      "credit": "Charlie Plumley, Roberta Takeuchi and Cubico Sustainable Investments",
+      "license": "CC BY 4.0",
+      "processing": "Hourly averaging of complete ten-minute site-meter readings. Source timestamps are treated as interval starts in UTC.",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "files": [
+        "prepared/dk1_solar_2025/target.csv",
+        "prepared/midtjylland/solar_hourly.npz",
+        "cases/03.csv",
+        "cases/08.csv",
+        "cases/08-single.csv"
+      ],
+      "source": "Energi Data Service",
+      "url": "https://www.energidataservice.dk/terms-and-conditions",
+      "credit": "Energinet",
+      "license": "CC BY 4.0",
+      "processing": "Select DK1 and Midtjylland solar production. Convert to kWh and label by UTC interval end.",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "files": [
+        "prepared/east_england/pv.csv",
+        "cases/09.csv"
+      ],
+      "source": "PV_Live, PES Region 10",
+      "url": "https://www.solar.sheffield.ac.uk/pvlive/regional/",
+      "credit": "PV_Live by Sheffield Solar, University of Sheffield",
+      "license": "CC BY 4.0",
+      "processing": "Retain half-hour generation estimates; the benchmark aggregates complete pairs.",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "files": [
+        "weather/hill_of_towie/forecast.json",
+        "weather/penmanshiel/forecast.json",
+        "weather/midtjylland/single_site.json",
+        "weather/dk1_solar_2025/north_jutland.json",
+        "weather/dk1_solar_2025/west_jutland.json",
+        "weather/dk1_solar_2025/central_jutland.json",
+        "weather/dk1_solar_2025/south_jutland.json",
+        "weather/dk1_solar_2025/funen.json",
+        "weather/midtjylland/center.json",
+        "weather/midtjylland/west.json",
+        "weather/midtjylland/east.json",
+        "weather/midtjylland/north.json",
+        "weather/midtjylland/south.json"
+      ],
+      "source": "Open-Meteo Previous Runs API",
+      "url": "https://open-meteo.com/en/docs/previous-runs-api",
+      "credit": "Weather data by Open-Meteo.com and the source weather providers, including NOAA NCEP and JMA",
+      "license": "CC BY 4.0",
+      "processing": "Archived hourly forecast responses retained as received. Case builders align hourly values by valid time.",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "files": [
+        "weather/east_england/gfs.csv"
+      ],
+      "source": "NOAA GFS forecast archive",
+      "url": "https://dynamical.org/catalog/noaa-gfs-forecast/",
+      "credit": "NOAA NWS NCEP GFS data processed by dynamical.org from NOAA Open Data Dissemination archives",
+      "license": "CC BY 4.0",
+      "processing": "Retain the radiation series in the lead-hour ordering used by the E1 forecast.",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "protocol": "fair",
+  "dataset": {
+    "dataset": "VEA 2016",
+    "test": "main evaluated test",
+    "split": "Different training, validation and test profiles; half-open target days."
+  },
+  "mode": "full",
+  "historical_reference": true,
+  "seeds": [
+    42
+  ],
+  "teacher_mae": 142.4931640625,
+  "summary": {
+    "toto/supervised": {
+      "mean_mae": 111.70053100585938,
+      "std_population": 0.0,
+      "seed_mae": [
+        111.70053100585938
+      ]
+    },
+    "toto/distilled": {
+      "mean_mae": 138.1053009033203,
+      "std_population": 0.0,
+      "seed_mae": [
+        138.1053009033203
+      ]
+    },
+    "toto/hybrid": {
+      "mean_mae": 113.13304901123047,
+      "std_population": 0.0,
+      "seed_mae": [
+        113.13304901123047
+      ]
+    },
+    "chronos-small/supervised": {
+      "mean_mae": 109.20379638671875,
+      "std_population": 0.0,
+      "seed_mae": [
+        109.20379638671875
+      ]
+    },
+    "chronos-small/distilled": {
+      "mean_mae": 136.67193603515625,
+      "std_population": 0.0,
+      "seed_mae": [
+        136.67193603515625
+      ]
+    },
+    "chronos-small/hybrid": {
+      "mean_mae": 109.12489318847656,
+      "std_population": 0.0,
+      "seed_mae": [
+        109.12489318847656
+      ]
+    }
+  }
+}
