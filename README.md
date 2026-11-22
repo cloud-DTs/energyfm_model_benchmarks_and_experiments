@@ -4,10 +4,13 @@ Compare Chronos 2, Chronicle, Toto 2.0 22M and Chronos 2 Small, then run the E1 
 
 ## Result figures
 
-- [Zero-shot benchmark on VEA and UCI](figures/benchmark-zero-shot-accuracy.png)
-- [E1 · Forecast error with and without weather](figures/e1-with-and-without-weather.png)
-- [E2 · Student accuracy by training objective](figures/e2-student-accuracy.png)
-- [E3 · Accepted replay updates at seed 42](figures/e3-update-acceptance.png)
+![Zero-shot benchmark on VEA and UCI](figures/benchmark-zero-shot-accuracy.png)
+
+![E1 · Forecast error with and without weather](figures/e1-with-and-without-weather.png)
+
+![E2 · Student accuracy by training objective](figures/e2-student-accuracy.png)
+
+![E3 · Accepted replay updates at seed 42](figures/e3-update-acceptance.png)
 
 ## Setup
 
