@@ -10,6 +10,7 @@
       "url": "https://zenodo.org/records/22662930",
       "credit": "Alex Clerc and Elizabeth Lingkan, Renewable Energy Systems, on behalf of TRIG",
       "license": "CC BY 4.0",
+      "disclaimer": "Renewable Energy Systems, acting on behalf of TRIG, provides the source dataset as is, without warranty.",
       "processing": "Hourly averaging of complete sets of six ten-minute SCADA measurements. Case keys use the last observed hour end in UTC.",
       "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
@@ -22,6 +23,7 @@
       "url": "https://zenodo.org/records/16807304",
       "credit": "Charlie Plumley, Roberta Takeuchi and Cubico Sustainable Investments",
       "license": "CC BY 4.0",
+      "disclaimer": "Cubico Sustainable Investments Ltd provides the source dataset as is, without warranty.",
       "processing": "Hourly averaging of complete ten-minute site-meter readings. Source timestamps are treated as interval starts in UTC.",
       "license_url": "https://creativecommons.org/licenses/by/4.0/"
     },
@@ -71,6 +73,7 @@
       "source": "Open-Meteo Previous Runs API",
       "url": "https://open-meteo.com/en/docs/previous-runs-api",
       "credit": "Weather data by Open-Meteo.com and the source weather providers, including NOAA NCEP and JMA",
+      "credit_url": "https://open-meteo.com/",
       "license": "CC BY 4.0",
       "processing": "Archived hourly forecast responses retained as received. Case builders align hourly values by valid time.",
       "license_url": "https://creativecommons.org/licenses/by/4.0/"

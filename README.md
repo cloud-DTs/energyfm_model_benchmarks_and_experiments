@@ -62,6 +62,8 @@ python -m energyfm fetch data vea uci
 
 The prepared E1 inputs are included in `data/e1/`. Model weights and the VEA and UCI archives are downloaded on first setup.
 
+[Weather data by Open-Meteo.com](https://open-meteo.com/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This attribution applies to the archived JSON forecasts for DK1, Hill of Towie, Midtjylland, and Penmanshiel. See [sources.json](data/e1/sources.json) for the file list and processing details.
+
 ## Try all four benchmarks
 
 Run these commands in the same virtual environment.
