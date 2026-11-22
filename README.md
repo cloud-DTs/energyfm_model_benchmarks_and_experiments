@@ -29,6 +29,17 @@ python -m pip install --no-deps torch==2.10.0 --index-url https://download.pytor
 python -m pip install ".[cpu]"
 ```
 
+**Optional CUDA setup on Linux and Windows**
+
+With a compatible NVIDIA GPU and driver, use these install commands for CUDA 12.8.
+
+```sh
+python -m pip install --no-deps "torch==2.10.0+cu128" --index-url https://download.pytorch.org/whl/cu128
+python -m pip install ".[cuda]"
+```
+
+Add `--device cuda` to the run commands below, including `e2 prepare-targets`.
+
 Download the pinned model versions and the VEA and UCI datasets.
 
 ```sh
@@ -51,7 +62,7 @@ python -m energyfm e3 replay --smoke --model toto --seeds 42
 python -m energyfm e3 replay --smoke --model chronos-small --seeds 42
 ```
 
-The first command compares the four base models on the same windows. E1 compares forecasts with and without archived weather. E2 runs a small training comparison for each dataset. E3 screens one VEA profile per student and replays an update when triggered. Results are written to `runs/`. Reference results from earlier runs are in `reference/`.
+The first command compares the four base models on the same windows. E1 compares forecasts with and without archived weather. E2 runs a small training comparison for each dataset. E3 screens one VEA profile per student and replays an update when triggered. Results are written to `runs/`.
 
 ## Run the full experiments
 
@@ -59,15 +70,16 @@ Generate the E2 teacher targets once per dataset. On later runs, start with the 
 
 ```sh
 python -m energyfm benchmark
-python -m energyfm e1
+python -m energyfm e1 --experiment 01 02 03 08 09
+python -m energyfm e1 --experiment 08-single --models chronos
 
 python -m energyfm e2 prepare-targets --dataset vea --kind quantile
-python -m energyfm e2 compare --dataset vea
+python -m energyfm e2 compare --dataset vea --protocol fair --seeds 42
 python -m energyfm e2 prepare-targets --dataset uci --kind quantile
 python -m energyfm e2 compare --dataset uci
 
-python -m energyfm e3 replay --model toto
-python -m energyfm e3 replay --model chronos-small
+python -m energyfm e3 replay --model toto --seeds 42
+python -m energyfm e3 replay --model chronos-small --seeds 42 43 44
 ```
 
 The other E2 experiments are listed under `python -m energyfm e2 --help`.
