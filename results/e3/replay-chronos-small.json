@@ -1,0 +1,1272 @@
+{
+  "model": "chronos-small",
+  "plan": {
+    "model": "chronos-small",
+    "profile_limit": 10,
+    "screened_profiles": [
+      101,
+      200
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "scopes": [
+      "head",
+      "full"
+    ],
+    "training_steps": 10,
+    "batch_size": 8,
+    "learning_rate": 1e-05,
+    "teacher_weight": 0.5,
+    "reference_training_shadow_days": [
+      30,
+      90,
+      30
+    ],
+    "minimum_gain_percent": 0.1
+  },
+  "hardware": {
+    "device": "cuda",
+    "python": "3.13.18",
+    "torch": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "triggers": [
+    {
+      "profile_id": 101,
+      "observed_day": 311,
+      "update_day": 312,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 103,
+      "observed_day": 309,
+      "update_day": 310,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 104,
+      "observed_day": 309,
+      "update_day": 310,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 106,
+      "observed_day": 314,
+      "update_day": 315,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 107,
+      "observed_day": 309,
+      "update_day": 310,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 108,
+      "observed_day": 314,
+      "update_day": 315,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 111,
+      "observed_day": 328,
+      "update_day": 329,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 112,
+      "observed_day": 309,
+      "update_day": 310,
+      "failure_count": 4
+    },
+    {
+      "profile_id": 115,
+      "observed_day": 309,
+      "update_day": 310,
+      "failure_count": 3
+    },
+    {
+      "profile_id": 116,
+      "observed_day": 310,
+      "update_day": 311,
+      "failure_count": 3
+    }
+  ],
+  "candidates": [
+    {
+      "profile_id": 101,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 110.49696350097656,
+      "candidate_reference_mae": 112.26226043701172,
+      "base_shadow_mae": 78.2670669555664,
+      "candidate_shadow_mae": 80.21187591552734,
+      "accepted": false,
+      "shadow_improvement_percent": -2.4848368996183794,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.15555455799767515
+      }
+    },
+    {
+      "profile_id": 101,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 110.49696350097656,
+      "candidate_reference_mae": 111.46027374267578,
+      "base_shadow_mae": 78.2670669555664,
+      "candidate_shadow_mae": 79.23722076416016,
+      "accepted": false,
+      "shadow_improvement_percent": -1.2395428196440827,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10746071900211973
+      }
+    },
+    {
+      "profile_id": 101,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 110.49696350097656,
+      "candidate_reference_mae": 111.6610107421875,
+      "base_shadow_mae": 78.2670669555664,
+      "candidate_shadow_mae": 79.6894760131836,
+      "accepted": false,
+      "shadow_improvement_percent": -1.817378768549886,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11496258900297107
+      }
+    },
+    {
+      "profile_id": 101,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 110.49696350097656,
+      "candidate_reference_mae": 84.49816131591797,
+      "base_shadow_mae": 78.2670669555664,
+      "candidate_shadow_mae": 60.698524475097656,
+      "accepted": true,
+      "shadow_improvement_percent": 22.446915623454654,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3225881539983675
+      }
+    },
+    {
+      "profile_id": 101,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 110.49696350097656,
+      "candidate_reference_mae": 83.97518157958984,
+      "base_shadow_mae": 78.2670669555664,
+      "candidate_shadow_mae": 53.93027877807617,
+      "accepted": true,
+      "shadow_improvement_percent": 31.09454477361041,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3135500210009923
+      }
+    },
+    {
+      "profile_id": 101,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 110.49696350097656,
+      "candidate_reference_mae": 92.83985137939453,
+      "base_shadow_mae": 78.2670669555664,
+      "candidate_shadow_mae": 71.53003692626953,
+      "accepted": true,
+      "shadow_improvement_percent": 8.607745621950553,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.30650184900150634
+      }
+    },
+    {
+      "profile_id": 103,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 30.383872985839844,
+      "candidate_reference_mae": 30.342409133911133,
+      "base_shadow_mae": 31.23365020751953,
+      "candidate_shadow_mae": 31.22633171081543,
+      "accepted": false,
+      "shadow_improvement_percent": 0.02343144863144951,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11103372099751141
+      }
+    },
+    {
+      "profile_id": 103,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 30.383872985839844,
+      "candidate_reference_mae": 30.198192596435547,
+      "base_shadow_mae": 31.23365020751953,
+      "candidate_shadow_mae": 31.20911979675293,
+      "accepted": false,
+      "shadow_improvement_percent": 0.07853840522519473,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11089998200259288
+      }
+    },
+    {
+      "profile_id": 103,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 30.383872985839844,
+      "candidate_reference_mae": 30.259593963623047,
+      "base_shadow_mae": 31.23365020751953,
+      "candidate_shadow_mae": 31.2998046875,
+      "accepted": false,
+      "shadow_improvement_percent": -0.21180515098597727,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10340407200055779
+      }
+    },
+    {
+      "profile_id": 103,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 30.383872985839844,
+      "candidate_reference_mae": 20.6131591796875,
+      "base_shadow_mae": 31.23365020751953,
+      "candidate_shadow_mae": 20.70960807800293,
+      "accepted": true,
+      "shadow_improvement_percent": 33.69456358636855,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.30524425800103927
+      }
+    },
+    {
+      "profile_id": 103,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 30.383872985839844,
+      "candidate_reference_mae": 20.59400177001953,
+      "base_shadow_mae": 31.23365020751953,
+      "candidate_shadow_mae": 18.462238311767578,
+      "accepted": true,
+      "shadow_improvement_percent": 40.889911396514336,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.31703560299865785
+      }
+    },
+    {
+      "profile_id": 103,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 30.383872985839844,
+      "candidate_reference_mae": 21.554235458374023,
+      "base_shadow_mae": 31.23365020751953,
+      "candidate_shadow_mae": 21.202512741088867,
+      "accepted": true,
+      "shadow_improvement_percent": 32.11644300228367,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3054142380024132
+      }
+    },
+    {
+      "profile_id": 104,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 122.4897232055664,
+      "candidate_reference_mae": 121.17388153076172,
+      "base_shadow_mae": 110.33804321289062,
+      "candidate_shadow_mae": 109.63172912597656,
+      "accepted": true,
+      "shadow_improvement_percent": 0.6401364990235253,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10741714300093008
+      }
+    },
+    {
+      "profile_id": 104,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 122.4897232055664,
+      "candidate_reference_mae": 120.9746322631836,
+      "base_shadow_mae": 110.33804321289062,
+      "candidate_shadow_mae": 109.71378326416016,
+      "accepted": true,
+      "shadow_improvement_percent": 0.5657703640130691,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11353800899814814
+      }
+    },
+    {
+      "profile_id": 104,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 122.4897232055664,
+      "candidate_reference_mae": 120.54967498779297,
+      "base_shadow_mae": 110.33804321289062,
+      "candidate_shadow_mae": 109.82301330566406,
+      "accepted": true,
+      "shadow_improvement_percent": 0.4667745523027296,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10331100100302137
+      }
+    },
+    {
+      "profile_id": 104,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 122.4897232055664,
+      "candidate_reference_mae": 111.31000518798828,
+      "base_shadow_mae": 110.33804321289062,
+      "candidate_shadow_mae": 105.6224594116211,
+      "accepted": true,
+      "shadow_improvement_percent": 4.2737605851601845,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.302137844999379
+      }
+    },
+    {
+      "profile_id": 104,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 122.4897232055664,
+      "candidate_reference_mae": 105.93035125732422,
+      "base_shadow_mae": 110.33804321289062,
+      "candidate_shadow_mae": 100.83491516113281,
+      "accepted": true,
+      "shadow_improvement_percent": 8.61273933725841,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3058990140016249
+      }
+    },
+    {
+      "profile_id": 104,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 122.4897232055664,
+      "candidate_reference_mae": 108.67414093017578,
+      "base_shadow_mae": 110.33804321289062,
+      "candidate_shadow_mae": 101.83049011230469,
+      "accepted": true,
+      "shadow_improvement_percent": 7.710444061592723,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3079947929982154
+      }
+    },
+    {
+      "profile_id": 106,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 33.25939178466797,
+      "candidate_reference_mae": 32.73477554321289,
+      "base_shadow_mae": 37.40966796875,
+      "candidate_shadow_mae": 36.73819351196289,
+      "accepted": true,
+      "shadow_improvement_percent": 1.7949222573908503,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10663172099884832
+      }
+    },
+    {
+      "profile_id": 106,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 33.25939178466797,
+      "candidate_reference_mae": 32.69660186767578,
+      "base_shadow_mae": 37.40966796875,
+      "candidate_shadow_mae": 36.68251037597656,
+      "accepted": true,
+      "shadow_improvement_percent": 1.9437691705279645,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.1038072170013038
+      }
+    },
+    {
+      "profile_id": 106,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 33.25939178466797,
+      "candidate_reference_mae": 32.64837646484375,
+      "base_shadow_mae": 37.40966796875,
+      "candidate_shadow_mae": 36.661502838134766,
+      "accepted": true,
+      "shadow_improvement_percent": 1.9999245415388631,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10871579599916004
+      }
+    },
+    {
+      "profile_id": 106,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 33.25939178466797,
+      "candidate_reference_mae": 22.56017303466797,
+      "base_shadow_mae": 37.40966796875,
+      "candidate_shadow_mae": 26.09186553955078,
+      "accepted": true,
+      "shadow_improvement_percent": 30.253683188670625,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.2977553929995338
+      }
+    },
+    {
+      "profile_id": 106,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 33.25939178466797,
+      "candidate_reference_mae": 18.86368751525879,
+      "base_shadow_mae": 37.40966796875,
+      "candidate_shadow_mae": 21.269960403442383,
+      "accepted": true,
+      "shadow_improvement_percent": 43.14314572048554,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.30674463700052
+      }
+    },
+    {
+      "profile_id": 106,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 33.25939178466797,
+      "candidate_reference_mae": 20.65226173400879,
+      "base_shadow_mae": 37.40966796875,
+      "candidate_shadow_mae": 22.148340225219727,
+      "accepted": true,
+      "shadow_improvement_percent": 40.79514353422959,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.29923451300055603
+      }
+    },
+    {
+      "profile_id": 107,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 15.78630256652832,
+      "candidate_reference_mae": 15.724349975585938,
+      "base_shadow_mae": 15.432096481323242,
+      "candidate_shadow_mae": 15.57949447631836,
+      "accepted": false,
+      "shadow_improvement_percent": -0.9551391489387473,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10698871800195775
+      }
+    },
+    {
+      "profile_id": 107,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 15.78630256652832,
+      "candidate_reference_mae": 15.755213737487793,
+      "base_shadow_mae": 15.432096481323242,
+      "candidate_shadow_mae": 15.491082191467285,
+      "accepted": false,
+      "shadow_improvement_percent": -0.38222745830698157,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10257744900081889
+      }
+    },
+    {
+      "profile_id": 107,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 15.78630256652832,
+      "candidate_reference_mae": 15.707793235778809,
+      "base_shadow_mae": 15.432096481323242,
+      "candidate_shadow_mae": 15.592232704162598,
+      "accepted": false,
+      "shadow_improvement_percent": -1.0376828775867297,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10651429499921505
+      }
+    },
+    {
+      "profile_id": 107,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 15.78630256652832,
+      "candidate_reference_mae": 12.320369720458984,
+      "base_shadow_mae": 15.432096481323242,
+      "candidate_shadow_mae": 10.782440185546875,
+      "accepted": true,
+      "shadow_improvement_percent": 30.12977725614684,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.29527728099856176
+      }
+    },
+    {
+      "profile_id": 107,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 15.78630256652832,
+      "candidate_reference_mae": 12.300495147705078,
+      "base_shadow_mae": 15.432096481323242,
+      "candidate_shadow_mae": 10.724782943725586,
+      "accepted": true,
+      "shadow_improvement_percent": 30.503396238448236,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.2985497919980844
+      }
+    },
+    {
+      "profile_id": 107,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 15.78630256652832,
+      "candidate_reference_mae": 13.01201057434082,
+      "base_shadow_mae": 15.432096481323242,
+      "candidate_shadow_mae": 10.84459114074707,
+      "accepted": true,
+      "shadow_improvement_percent": 29.727039006840187,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.31627198299975134
+      }
+    },
+    {
+      "profile_id": 108,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 37.52793884277344,
+      "candidate_reference_mae": 37.37367248535156,
+      "base_shadow_mae": 40.4670524597168,
+      "candidate_shadow_mae": 40.302589416503906,
+      "accepted": true,
+      "shadow_improvement_percent": 0.40641221244518977,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10971150600016699
+      }
+    },
+    {
+      "profile_id": 108,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 37.52793884277344,
+      "candidate_reference_mae": 37.460479736328125,
+      "base_shadow_mae": 40.4670524597168,
+      "candidate_shadow_mae": 40.391258239746094,
+      "accepted": true,
+      "shadow_improvement_percent": 0.18729859321024925,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10614445800092653
+      }
+    },
+    {
+      "profile_id": 108,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 37.52793884277344,
+      "candidate_reference_mae": 37.483272552490234,
+      "base_shadow_mae": 40.4670524597168,
+      "candidate_shadow_mae": 40.385982513427734,
+      "accepted": true,
+      "shadow_improvement_percent": 0.20033568387458942,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10945466799967107
+      }
+    },
+    {
+      "profile_id": 108,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 37.52793884277344,
+      "candidate_reference_mae": 33.50233840942383,
+      "base_shadow_mae": 40.4670524597168,
+      "candidate_shadow_mae": 34.06208038330078,
+      "accepted": true,
+      "shadow_improvement_percent": 15.827621946994753,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3173134469980141
+      }
+    },
+    {
+      "profile_id": 108,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 37.52793884277344,
+      "candidate_reference_mae": 32.90826416015625,
+      "base_shadow_mae": 40.4670524597168,
+      "candidate_shadow_mae": 35.633705139160156,
+      "accepted": true,
+      "shadow_improvement_percent": 11.943907516783016,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.30676204600240453
+      }
+    },
+    {
+      "profile_id": 108,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 37.52793884277344,
+      "candidate_reference_mae": 31.301307678222656,
+      "base_shadow_mae": 40.4670524597168,
+      "candidate_shadow_mae": 34.24774932861328,
+      "accepted": true,
+      "shadow_improvement_percent": 15.368806851684004,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.2984407860021747
+      }
+    },
+    {
+      "profile_id": 111,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 138.29531860351562,
+      "candidate_reference_mae": 137.635986328125,
+      "base_shadow_mae": 121.47634887695312,
+      "candidate_shadow_mae": 120.07398986816406,
+      "accepted": true,
+      "shadow_improvement_percent": 1.15442966614806,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10319800899742404
+      }
+    },
+    {
+      "profile_id": 111,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 138.29531860351562,
+      "candidate_reference_mae": 138.1608428955078,
+      "base_shadow_mae": 121.47634887695312,
+      "candidate_shadow_mae": 120.33932495117188,
+      "accepted": true,
+      "shadow_improvement_percent": 0.9360043632303883,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10074322400032543
+      }
+    },
+    {
+      "profile_id": 111,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 138.29531860351562,
+      "candidate_reference_mae": 135.44439697265625,
+      "base_shadow_mae": 121.47634887695312,
+      "candidate_shadow_mae": 119.3291015625,
+      "accepted": true,
+      "shadow_improvement_percent": 1.767625825359744,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10617890399953467
+      }
+    },
+    {
+      "profile_id": 111,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 138.29531860351562,
+      "candidate_reference_mae": 104.25209045410156,
+      "base_shadow_mae": 121.47634887695312,
+      "candidate_shadow_mae": 107.18627166748047,
+      "accepted": true,
+      "shadow_improvement_percent": 11.76367032890286,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3220342420027009
+      }
+    },
+    {
+      "profile_id": 111,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 138.29531860351562,
+      "candidate_reference_mae": 82.38090515136719,
+      "base_shadow_mae": 121.47634887695312,
+      "candidate_shadow_mae": 95.56661987304688,
+      "accepted": true,
+      "shadow_improvement_percent": 21.329031736170272,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.2981466140008706
+      }
+    },
+    {
+      "profile_id": 111,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 138.29531860351562,
+      "candidate_reference_mae": 95.68360137939453,
+      "base_shadow_mae": 121.47634887695312,
+      "candidate_shadow_mae": 92.09544372558594,
+      "accepted": true,
+      "shadow_improvement_percent": 24.18652307465048,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3096574880000844
+      }
+    },
+    {
+      "profile_id": 112,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 10.429092407226562,
+      "candidate_reference_mae": 10.512093544006348,
+      "base_shadow_mae": 15.730289459228516,
+      "candidate_shadow_mae": 15.817298889160156,
+      "accepted": false,
+      "shadow_improvement_percent": -0.5531330504575976,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.101496520001092
+      }
+    },
+    {
+      "profile_id": 112,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 10.429092407226562,
+      "candidate_reference_mae": 10.499072074890137,
+      "base_shadow_mae": 15.730289459228516,
+      "candidate_shadow_mae": 15.8081693649292,
+      "accepted": false,
+      "shadow_improvement_percent": -0.4950951850094129,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.1025347149989102
+      }
+    },
+    {
+      "profile_id": 112,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 10.429092407226562,
+      "candidate_reference_mae": 10.49919605255127,
+      "base_shadow_mae": 15.730289459228516,
+      "candidate_shadow_mae": 15.796854972839355,
+      "accepted": false,
+      "shadow_improvement_percent": -0.4231677604113492,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10324654199939687
+      }
+    },
+    {
+      "profile_id": 112,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 10.429092407226562,
+      "candidate_reference_mae": 6.518069267272949,
+      "base_shadow_mae": 15.730289459228516,
+      "candidate_shadow_mae": 12.180965423583984,
+      "accepted": true,
+      "shadow_improvement_percent": 22.5636282462828,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3057157850016665
+      }
+    },
+    {
+      "profile_id": 112,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 10.429092407226562,
+      "candidate_reference_mae": 8.73789119720459,
+      "base_shadow_mae": 15.730289459228516,
+      "candidate_shadow_mae": 15.1464262008667,
+      "accepted": true,
+      "shadow_improvement_percent": 3.71171337867073,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3110279390020878
+      }
+    },
+    {
+      "profile_id": 112,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 10.429092407226562,
+      "candidate_reference_mae": 7.688751697540283,
+      "base_shadow_mae": 15.730289459228516,
+      "candidate_shadow_mae": 13.81334400177002,
+      "accepted": true,
+      "shadow_improvement_percent": 12.186333013305603,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3089923949992226
+      }
+    },
+    {
+      "profile_id": 115,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 20.22465705871582,
+      "candidate_reference_mae": 20.17965316772461,
+      "base_shadow_mae": 25.12489891052246,
+      "candidate_shadow_mae": 25.04012107849121,
+      "accepted": true,
+      "shadow_improvement_percent": 0.33742556470841967,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10395521400278085
+      }
+    },
+    {
+      "profile_id": 115,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 20.22465705871582,
+      "candidate_reference_mae": 20.175262451171875,
+      "base_shadow_mae": 25.12489891052246,
+      "candidate_shadow_mae": 25.05643081665039,
+      "accepted": true,
+      "shadow_improvement_percent": 0.2725109227937847,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10880980200090562
+      }
+    },
+    {
+      "profile_id": 115,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 20.22465705871582,
+      "candidate_reference_mae": 20.212528228759766,
+      "base_shadow_mae": 25.12489891052246,
+      "candidate_shadow_mae": 25.07389259338379,
+      "accepted": true,
+      "shadow_improvement_percent": 0.20301103427449063,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11368937700171955
+      }
+    },
+    {
+      "profile_id": 115,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 20.22465705871582,
+      "candidate_reference_mae": 16.2275333404541,
+      "base_shadow_mae": 25.12489891052246,
+      "candidate_shadow_mae": 20.741687774658203,
+      "accepted": true,
+      "shadow_improvement_percent": 17.44568665320497,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3007498669976485
+      }
+    },
+    {
+      "profile_id": 115,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 20.22465705871582,
+      "candidate_reference_mae": 16.190174102783203,
+      "base_shadow_mae": 25.12489891052246,
+      "candidate_shadow_mae": 20.9349308013916,
+      "accepted": true,
+      "shadow_improvement_percent": 16.676557084080745,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3060081099974923
+      }
+    },
+    {
+      "profile_id": 115,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 20.22465705871582,
+      "candidate_reference_mae": 16.799652099609375,
+      "base_shadow_mae": 25.12489891052246,
+      "candidate_shadow_mae": 22.109508514404297,
+      "accepted": true,
+      "shadow_improvement_percent": 12.00160210338319,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3144027870002901
+      }
+    },
+    {
+      "profile_id": 116,
+      "scope": "head",
+      "seed": 42,
+      "base_reference_mae": 1.914233684539795,
+      "candidate_reference_mae": 1.9272385835647583,
+      "base_shadow_mae": 4.077254772186279,
+      "candidate_shadow_mae": 4.08162260055542,
+      "accepted": false,
+      "shadow_improvement_percent": -0.10712669708394347,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11140083400096046
+      }
+    },
+    {
+      "profile_id": 116,
+      "scope": "head",
+      "seed": 43,
+      "base_reference_mae": 1.914233684539795,
+      "candidate_reference_mae": 1.9077341556549072,
+      "base_shadow_mae": 4.077254772186279,
+      "candidate_shadow_mae": 4.088484764099121,
+      "accepted": false,
+      "shadow_improvement_percent": -0.27543022303754944,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.11164140300024883
+      }
+    },
+    {
+      "profile_id": 116,
+      "scope": "head",
+      "seed": 44,
+      "base_reference_mae": 1.914233684539795,
+      "candidate_reference_mae": 1.907353162765503,
+      "base_shadow_mae": 4.077254772186279,
+      "candidate_shadow_mae": 4.101324558258057,
+      "accepted": false,
+      "shadow_improvement_percent": -0.5903429492798361,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 1583520,
+        "training_seconds": 0.10829842200109852
+      }
+    },
+    {
+      "profile_id": 116,
+      "scope": "full",
+      "seed": 42,
+      "base_reference_mae": 1.914233684539795,
+      "candidate_reference_mae": 1.8567456007003784,
+      "base_shadow_mae": 4.077254772186279,
+      "candidate_shadow_mae": 4.355037212371826,
+      "accepted": false,
+      "shadow_improvement_percent": -6.812977253236402,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3113912179978797
+      }
+    },
+    {
+      "profile_id": 116,
+      "scope": "full",
+      "seed": 43,
+      "base_reference_mae": 1.914233684539795,
+      "candidate_reference_mae": 1.8499667644500732,
+      "base_shadow_mae": 4.077254772186279,
+      "candidate_shadow_mae": 4.256440162658691,
+      "accepted": false,
+      "shadow_improvement_percent": -4.394755797326113,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3125011379997886
+      }
+    },
+    {
+      "profile_id": 116,
+      "scope": "full",
+      "seed": 44,
+      "base_reference_mae": 1.914233684539795,
+      "candidate_reference_mae": 1.83078134059906,
+      "base_shadow_mae": 4.077254772186279,
+      "candidate_shadow_mae": 3.9894189834594727,
+      "accepted": true,
+      "shadow_improvement_percent": 2.1542874712170095,
+      "training": {
+        "steps": 10,
+        "batch_size": 8,
+        "learning_rate": 1e-05,
+        "teacher_weight": 0.5,
+        "trainable_parameters": 27934624,
+        "training_seconds": 0.3039500519989815
+      }
+    }
+  ],
+  "summary": {
+    "head": {
+      "candidates": 30,
+      "accepted": 15,
+      "profiles_with_any_acceptance": [
+        104,
+        106,
+        108,
+        111,
+        115
+      ],
+      "mean_shadow_improvement_percent": 0.08018040385960298
+    },
+    "full": {
+      "candidates": 30,
+      "accepted": 28,
+      "profiles_with_any_acceptance": [
+        101,
+        103,
+        104,
+        106,
+        107,
+        108,
+        111,
+        112,
+        115,
+        116
+      ],
+      "mean_shadow_improvement_percent": 18.998362976259415
+    }
+  },
+  "limitations": "Replay only: no active model changes, no labelled drift events, no independent post-gate test."
+}

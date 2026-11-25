@@ -1,0 +1,113 @@
+{
+  "hardware": {
+    "device": "cuda",
+    "python": "3.13.18",
+    "torch": "2.10.0+cu128",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "model_revisions": {
+    "chronos": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+  },
+  "case_limit": null,
+  "input_version": 1,
+  "metrics": [
+    {
+      "experiment": "01",
+      "model": "chronos",
+      "period": "all",
+      "unit": "kW",
+      "origins": 216,
+      "without_context_mae": 410.64739990234375,
+      "with_context_mae": 316.4439392089844,
+      "mae_reduction_percent": 22.940230649399453,
+      "confidence_interval": [
+        16.372416956817716,
+        29.149368695308425
+      ]
+    },
+    {
+      "experiment": "02",
+      "model": "chronos",
+      "period": "all",
+      "unit": "kW",
+      "origins": 68,
+      "without_context_mae": 6784.11962890625,
+      "with_context_mae": 4533.3837890625,
+      "mae_reduction_percent": 33.17653524642545,
+      "confidence_interval": [
+        25.671843665412187,
+        40.37470168378814
+      ]
+    },
+    {
+      "experiment": "03",
+      "model": "chronos",
+      "period": "all",
+      "unit": "kWh",
+      "origins": 8760,
+      "without_context_mae": 140135.046875,
+      "with_context_mae": 121353.28125,
+      "mae_reduction_percent": 13.402618434026191,
+      "confidence_interval": [
+        10.17089991334736,
+        16.745302575692968
+      ]
+    },
+    {
+      "experiment": "08",
+      "model": "chronos",
+      "period": "all",
+      "unit": "kWh",
+      "origins": 4843,
+      "without_context_mae": 55873.04296875,
+      "with_context_mae": 48657.49609375,
+      "mae_reduction_percent": 12.914182746473434,
+      "confidence_interval": [
+        9.262329411617026,
+        16.533716363170775
+      ]
+    },
+    {
+      "experiment": "09",
+      "model": "chronos",
+      "period": "all",
+      "unit": "MW",
+      "origins": 103,
+      "without_context_mae": 120.57067108154297,
+      "with_context_mae": 92.76980590820312,
+      "mae_reduction_percent": 23.05773445893644,
+      "confidence_interval": [
+        17.164587884755733,
+        28.313818601565888
+      ]
+    },
+    {
+      "experiment": "08-single",
+      "model": "chronos",
+      "period": "2025",
+      "unit": "kWh",
+      "origins": 536,
+      "without_context_mae": 33014.26953125,
+      "with_context_mae": 24452.603515625,
+      "mae_reduction_percent": 25.933228683193686,
+      "confidence_interval": [
+        10.777764605443952,
+        41.61111925478787
+      ]
+    },
+    {
+      "experiment": "08-single",
+      "model": "chronos",
+      "period": "2026",
+      "unit": "kWh",
+      "origins": 338,
+      "without_context_mae": 92985.53125,
+      "with_context_mae": 92309.3125,
+      "mae_reduction_percent": 0.7272300764534223,
+      "confidence_interval": [
+        -7.69789317442719,
+        8.310569857820145
+      ]
+    }
+  ]
+}

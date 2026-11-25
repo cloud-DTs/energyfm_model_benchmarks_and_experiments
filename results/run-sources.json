@@ -1,0 +1,54 @@
+{
+  "reproduction_commit": "f9103b080929c3ff27a6fe76f16f896a92eb931d",
+  "reproduction_commands": "README.md, Reproduce the full report experiments",
+  "models": {
+    "chronos": {
+      "repository": "amazon/chronos-2",
+      "revision": "29ec3766d36d6f73f0696f85560a422f50e8498c"
+    },
+    "chronos-small": {
+      "repository": "autogluon/chronos-2-small",
+      "revision": "ddec01313e50b6bc58ebaa92ede81bc24a3d9f9a"
+    },
+    "toto": {
+      "repository": "Datadog/Toto-2.0-22m",
+      "revision": "685e4ae3e2be8d8998025e53dd98e7fdcb296a89"
+    },
+    "chronicle": {
+      "repository": "InertialAI/Chronicle",
+      "revision": "9cc39bfdd21329aa16e308e3e957b532b0a89193"
+    }
+  },
+  "datasets": {
+    "vea": {
+      "source": "https://doi.org/10.5281/zenodo.13910298",
+      "version": "10.5281/zenodo.13910298",
+      "license": "CC-BY-4.0",
+      "attribution": "Paul Hendrik Tiemann, OFFIS"
+    },
+    "uci": {
+      "source": "https://doi.org/10.24432/C58C86",
+      "version": "10.24432/C58C86",
+      "license": "CC-BY-4.0",
+      "attribution": "Artur Trindade, UCI Machine Learning Repository"
+    }
+  },
+  "result_runs": {
+    "e1": {
+      "chronos_rerun": "context_20261125_153918_123286",
+      "chronicle_original": "20261119_181525_872287"
+    },
+    "e2": {
+      "objective-comparison-vea": "comparison_fair_vea_20261116_154757_394809",
+      "label-budget-vea-toto": "point_labels_vea_20261116_162935_862616",
+      "label-budget-vea-chronos-small": "point_labels_chronos_small_vea_20261117_175929_497381",
+      "label-budget-uci-toto": "point_labels_uci_20261116_164500_256620",
+      "label-budget-uci-chronos-small": "point_labels_chronos_small_uci_20261117_181537_868683",
+      "inference-efficiency-matched": "efficiency_matched_20261117_183158_570222"
+    },
+    "e3": {
+      "replay-toto": "replay_20261116_170018_547453",
+      "replay-chronos-small": "replay_chronos_small_20261117_183259_154148"
+    }
+  }
+}
