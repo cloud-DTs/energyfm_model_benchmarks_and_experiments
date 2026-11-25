@@ -62,7 +62,31 @@ python -m energyfm fetch data vea uci
 
 The prepared E1 inputs are included in `data/e1/`. Model weights and the VEA and UCI archives are downloaded on first setup.
 
-[Weather data by Open-Meteo.com](https://open-meteo.com/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This attribution applies to the archived JSON forecasts for DK1, Hill of Towie, Midtjylland, and Penmanshiel. See [sources.json](data/e1/sources.json) for the file list and processing details.
+## Models, datasets, and licenses
+
+Model weights are downloaded from the pinned upstream repositories below. The license column refers to the upstream model weights; software dependencies have their own licenses.
+
+| Model used | Upstream repository and pinned revision | Used in | License |
+|---|---|---|---|
+| Chronos 2 | [`amazon/chronos-2`](https://huggingface.co/amazon/chronos-2/tree/29ec3766d36d6f73f0696f85560a422f50e8498c) · `29ec3766d36d6f73f0696f85560a422f50e8498c` | Zero-shot benchmark; E1; E2 and E3 teacher | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| Chronos 2 Small | [`autogluon/chronos-2-small`](https://huggingface.co/autogluon/chronos-2-small/tree/ddec01313e50b6bc58ebaa92ede81bc24a3d9f9a) · `ddec01313e50b6bc58ebaa92ede81bc24a3d9f9a` | Zero-shot benchmark; E2 and E3 student | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| Toto 2.0 22M | [`Datadog/Toto-2.0-22m`](https://huggingface.co/Datadog/Toto-2.0-22m/tree/685e4ae3e2be8d8998025e53dd98e7fdcb296a89) · `685e4ae3e2be8d8998025e53dd98e7fdcb296a89` | Zero-shot benchmark; E2 and E3 student | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+| Chronicle | [`InertialAI/Chronicle`](https://huggingface.co/InertialAI/Chronicle/tree/9cc39bfdd21329aa16e308e3e957b532b0a89193) · `9cc39bfdd21329aa16e308e3e957b532b0a89193` | Zero-shot benchmark; E1 | [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) |
+
+The benchmark datasets and the licenses recorded for them are:
+
+| Dataset | Used in | Attribution / source | License |
+|---|---|---|---|
+| 5359 industrial VEA load profiles | Zero-shot benchmark; E2; E3 | Paul Hendrik Tiemann, OFFIS · [Zenodo record 13910298](https://doi.org/10.5281/zenodo.13910298) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| ElectricityLoadDiagrams20112014 (UCI) | Zero-shot benchmark; E2 | Artur Trindade · [UCI dataset 321](https://doi.org/10.24432/C58C86) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Hill of Towie wind farm data | E1 experiment 01 | Alex Clerc and Elizabeth Lingkan, Renewable Energy Systems, on behalf of TRIG · [Zenodo record 22662930](https://doi.org/10.5281/zenodo.22662930) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Penmanshiel PMU data | E1 experiment 02 | Charlie Plumley, Roberta Takeuchi, and Cubico Sustainable Investments · [Zenodo record 16807304](https://doi.org/10.5281/zenodo.16807304) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| DK1 and Midtjylland solar production | E1 experiments 03, 08, and 08-single | Energinet · [Energi Data Service terms](https://www.energidataservice.dk/terms-and-conditions) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| East England PV generation (PES Region 10) | E1 experiment 09 | PV_Live, University of Sheffield · [PV_Live](https://www.solar.sheffield.ac.uk/pvlive/regional/) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| Archived weather forecasts for Hill of Towie, Penmanshiel, DK1, and Midtjylland | E1 experiments 01, 02, 03, 08, and 08-single | Open-Meteo Previous Runs API and its source providers, including NOAA NCEP and JMA · [Open-Meteo](https://open-meteo.com/) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| NOAA GFS forecast archive for East England | E1 experiment 09 | NOAA NWS NCEP GFS, processed by dynamical.org · [GFS catalog](https://dynamical.org/catalog/noaa-gfs-forecast/) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+
+The versioned E1 input bundle is distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) and includes prepared series, forecast keys, and archived weather inputs. Its file-level sources, attribution, and processing notes are recorded in [`data/e1/sources.json`](data/e1/sources.json). Dataset entries above describe this repository's benchmark inputs; they do not enumerate the upstream pretraining corpora of the released foundation models.
 
 ## Try all four benchmarks
 
